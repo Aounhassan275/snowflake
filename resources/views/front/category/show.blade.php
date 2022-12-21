@@ -28,68 +28,68 @@
 					<div class="hover_Text d-flex align-items-end justify-content-between">
 						<div class="hover_text_iner">
 							<a href="{{route('service.show',str_replace(' ', '_',$service->title))}}" class="place_btn">Book</a>
-							<h3>{{$service->title}}</h3>
-							<p>{{$service->price}} AED</p>
+							<a href="{{route('service.show',str_replace(' ', '_',$service->title))}}"><h3>{{$service->title}}</h3></a>
+							<a href="{{route('service.show',str_replace(' ', '_',$service->title))}}"><p>{{$service->price}} AED</p></a>
 							@if($service->dune_bashing)
 							<div class="place_review">
-								<a href="#"><i class="fas fa-star"></i></a>
-								<span> Dune Bashing in Land Cruiser</span>
+								<a href="{{route('service.show',str_replace(' ', '_',$service->title))}}"><i class="fas fa-star"></i></a>
+								<a href="{{route('service.show',str_replace(' ', '_',$service->title))}}"><span> Dune Bashing in Land Cruiser</span></a>
 							</div>
 							<br>
 							@endif
 							@if($service->belly_dance)
-							<div class="place_review">
-								<a href="#"><i class="fas fa-star"></i></a>
-								<span> Belly Dance</span>
-							</div>
+								<div class="place_review">
+									<a href="{{route('service.show',str_replace(' ', '_',$service->title))}}"><i class="fas fa-star"></i></a>
+									<a href="{{route('service.show',str_replace(' ', '_',$service->title))}}"><span> Belly Dance</span></a>
+								</div>
 							<br>
 							@endif
 							@if($service->fire_show)
 							<div class="place_review">
-								<a href="#"><i class="fas fa-star"></i></a>
-								<span> Fire Show</span>
+								<a href="{{route('service.show',str_replace(' ', '_',$service->title))}}"><i class="fas fa-star"></i></a>
+								<a href="{{route('service.show',str_replace(' ', '_',$service->title))}}"><span> Fire Show</span></a>
 							</div>
 							<br>
 							@endif
 							@if($service->sand_boarding)
 							<div class="place_review">
-								<a href="#"><i class="fas fa-star"></i></a>
-								<span> Sand-Boarding</span>
+								<a href="{{route('service.show',str_replace(' ', '_',$service->title))}}"><i class="fas fa-star"></i></a>
+								<a href="{{route('service.show',str_replace(' ', '_',$service->title))}}"><span> Sand-Boarding</span></a>
 							</div>
 							<br>
 							@endif
 							@if($service->tanoura_show)
 							<div class="place_review">
-								<a href="#"><i class="fas fa-star"></i></a>
-								<span> Tanoura Show</span>
+								<a href="{{route('service.show',str_replace(' ', '_',$service->title))}}"><i class="fas fa-star"></i></a>
+								<a href="{{route('service.show',str_replace(' ', '_',$service->title))}}"><span> Tanoura Show</span></a>
 							</div>
 							<br>
 							@endif
 							@if($service->refreshments)
 							<div class="place_review">
-								<a href="#"><i class="fas fa-star"></i></a>
-								<span> Refreshments</span>
+								<a href="{{route('service.show',str_replace(' ', '_',$service->title))}}"><i class="fas fa-star"></i></a>
+								<a href="{{route('service.show',str_replace(' ', '_',$service->title))}}"><span> Refreshments</span></a>
 							</div>
 							<br>
 							@endif
 							@if($service->short_camel_ride)
 							<div class="place_review">
-								<a href="#"><i class="fas fa-star"></i></a>
-								<span> Short Camel Ride</span>
+								<a href="{{route('service.show',str_replace(' ', '_',$service->title))}}"><i class="fas fa-star"></i></a>
+								<a href="{{route('service.show',str_replace(' ', '_',$service->title))}}"><span> Short Camel Ride</span></a>
 							</div>
 							<br>
 							@endif
 							@if($service->photography)
 							<div class="place_review">
-								<a href="#"><i class="fas fa-star"></i></a>
-								<span> Opportunity of Photography</span>
+								<a href="{{route('service.show',str_replace(' ', '_',$service->title))}}"><i class="fas fa-star"></i></a>
+								<a href="{{route('service.show',str_replace(' ', '_',$service->title))}}"><span> Opportunity of Photography</span></a>
 							</div>
 							<br>
 							@endif
 							@if($service->henaa_tattoo)
 							<div class="place_review">
-								<a href="#"><i class="fas fa-star"></i></a>
-								<span> Henna Tattoo for Ladies</span>
+								<a href="{{route('service.show',str_replace(' ', '_',$service->title))}}"><i class="fas fa-star"></i></a>
+								<a href="{{route('service.show',str_replace(' ', '_',$service->title))}}"><span> Henna Tattoo for Ladies</span></a>
 							</div>
 							@endif
 						</div>

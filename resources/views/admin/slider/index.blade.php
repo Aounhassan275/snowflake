@@ -24,18 +24,18 @@
                 <form action="{{route('admin.slider.store')}}" method="post" enctype="multipart/form-data" >
                     @csrf
                     <div class="row">
-                        <div class="form-group col-md-12">
+                        {{-- <div class="form-group col-md-12">
                             <label>Slider Title</label>
                             <input name="title" type="text" class="form-control" placeholder="Enter Slider Title" required>
-                        </div>
+                        </div> --}}
                           <div class="form-group col-md-12">
                             <label>Slider Image</label>
                             <input name="image" type="file" class="form-control"  required>
                         </div>
-                          <div class="form-group col-md-12">
+                          {{-- <div class="form-group col-md-12">
                             <label>Slider Description</label>
                             <textarea name="description" class="form-control" cols="30" rows="10"></textarea>
-                        </div>
+                        </div> --}}
                         <div class="form-group col-md-12">
                             <label>Display Order</label>
                             <input type="number" name="display_order" placeholder="Enter Display Order" class="form-control" required>
@@ -60,8 +60,8 @@
             <tr>
                 <th>#</th>
                 <th>Slider Image</th>
-                <th>Slider Name</th>
-                <th>Slider Description</th>
+                {{-- <th>Slider Name</th> --}}
+                {{-- <th>Slider Description</th> --}}
                 <th>Display Order</th>
                 <th>Action</th>
                 <th>Action</th>
@@ -72,12 +72,13 @@
             <tr>
                 <td>{{$key+1}}</td>
                 <td><img src="{{asset($slider->image)}}" style="width:100px;height:auto;"></td>
-                <td>{{$slider->title}}</td>
-                <td>{{$slider->description}}</td>
+                {{-- <td>{{$slider->title}}</td>
+                <td>{{$slider->description}}</td> --}}
                 <td>{{$slider->display_order}}</td>
                 
                 <td>
-                    <button data-toggle="modal" data-target="#edit_modal" title="{{$slider->title}}" description="{{$slider->description}}"
+                    <button data-toggle="modal" data-target="#edit_modal" 
+                    {{-- title="{{$slider->title}}" description="{{$slider->description}}" --}}
                     display_order="{{$slider->display_order}}" id="{{$slider->id}}" class="edit-btn btn btn-primary">Edit</button>
                 </td>
                 <td>
@@ -104,18 +105,18 @@
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                 </div>
                 <div class="modal-body">
-                    <div class="form-group">
+                    {{-- <div class="form-group">
                         <label for="name">Slider Name</label>
                         <input class="form-control" type="text" id="title" name="title" placeholder="Enter Title" required>
-                    </div>
+                    </div> --}}
                      <div class="form-group">
                         <label for="name">Slider Image</label>
                         <input class="form-control" type="file" name="image" >
                     </div>
-                     <div class="form-group">
+                     {{-- <div class="form-group">
                         <label for="name">Slider Description</label>
                         <input class="form-control" type="text" id="description" name="description"  required>
-                    </div>
+                    </div> --}}
                     <div class="form-group">
                         <label>Display Order</label>
                         <input type="number" name="display_order" id="display_order" placeholder="Enter Display Order" class="form-control" required>
@@ -137,10 +138,10 @@
         $('.edit-btn').click(function(){
             let id = $(this).attr('id');
             let display_order = $(this).attr('display_order');
-            let description = $(this).attr('description');
-            let title = $(this).attr('title');
-            $('#title').val(title);
-            $('#description').val(description);
+            // let description = $(this).attr('description');
+            // let title = $(this).attr('title');
+            // $('#title').val(title);
+            // $('#description').val(description);
             $('#display_order').val(display_order);
             $('#id').val(id);
             $('#updateForm').attr('action','{{route('admin.slider.update','')}}' +'/'+id);
