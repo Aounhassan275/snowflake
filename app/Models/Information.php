@@ -46,4 +46,8 @@ class Information extends Model
         $information = Information::find(1);
         return @$information->about;
     }
+    public static function privacyPolicy(){
+        $information = Information::find(1);
+        return @$information->pdescription;
+    }
 }

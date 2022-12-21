@@ -71,6 +71,9 @@
 											<a class="nav-link {{Request::is('about_us')?'active':''}}" href="{{url('about_us')}}">About Us</a>
 										</li>
 										<li class="nav-item">
+											<a class="nav-link {{Request::is('privacy_policy')?'active':''}}" href="{{url('privacy_policy')}}">Privacy Policy</a>
+										</li>
+										<li class="nav-item">
 											<a class="nav-link {{Request::is('contact_us')?'active':''}}" href="{{url('contact_us')}}">Contact Us</a>
 										</li>
 									</ul>
