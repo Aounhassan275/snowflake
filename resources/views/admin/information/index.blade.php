@@ -33,16 +33,20 @@
                                 <input type="text" name="phone" placeholder="Enter Phone Number" value="{{$information->phone}}" class="form-control" required>
                             </div>   
                             <div class="form-group">
-                                <label>Upload Logo <a href="{{asset($information->image)}}"><i class="fa fa-eye"></i></a></label>
-                                <input type="file" name="image"  class="form-control" >
-                            </div> 
-                            <div class="form-group">
                                 <label>Enter Email Address</label>
                                 <input type="email" name="email" placeholder="Enter Email Address" value="{{$information->email}}" class="form-control" required>
                             </div>  
                             <div class="form-group">
                                 <label>Enter About Us Information</label>
                                 <textarea name="about" id="" cols="30" rows="2" class="form-control summernote">{{$information->about}}</textarea>                                        
+                            </div>
+                            <div class="form-group">
+                                <label>Upload Buggy <a href="{{asset($information->image)}}"><i class="fa fa-eye"></i></a></label>
+                                <input type="file" name="image"  class="form-control" >
+                            </div>        
+                            <div class="form-group">
+                                <label>Enter Buggy Content</label>
+                                <textarea name="bdescription" id="" cols="30" rows="2" class="form-control summernote">{{$information->bdescription}}</textarea>                                        
                             </div>       
                             <div class="form-group">
                                 <label>Enter Address</label>

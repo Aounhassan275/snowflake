@@ -46,6 +46,14 @@ class Information extends Model
         $information = Information::find(1);
         return @$information->about;
     }
+    public static function buggyContent(){
+        $information = Information::find(1);
+        return @$information->bdescription;
+    }
+    public static function buggyImage(){
+        $information = Information::find(1);
+        return @$information->image;
+    }
     public static function privacyPolicy(){
         $information = Information::find(1);
         return @$information->pdescription;

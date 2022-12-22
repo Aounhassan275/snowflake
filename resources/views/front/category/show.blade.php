@@ -3,7 +3,7 @@
 <title>{{$category->name}} SERVICES | {{App\Models\Information::siteName()}}</title>
 @endsection
 @section('content')
-<section class="breadcrumb breadcrumb_bg">
+<section class="breadcrumb breadcrumb_bg" style="background-image:url({{asset($category->image)}})">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">

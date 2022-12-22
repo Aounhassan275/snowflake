@@ -4,16 +4,18 @@
 @endsection
 @section('content')
 
-
-<section class="banner_part">
+@php 
+$slider = App\Models\Slider::find(1);
+@endphp
+<section class="banner_part" style="background-image:url({{asset($slider->image)}})">
 	<div class="container">
 	  <div class="row align-items-center justify-content-center">
 		<div class="col-lg-10">
 		  <div class="banner_text text-center">
 			<div class="banner_text_iner">
-			  <h1> Saintmartine</h1>
-			  <p>Let’s start your journey with us, your dream will come true</p>
-			  <a href="#" class="btn_1">Discover Now</a>
+			  <h1> {{$slider->title}}</h1>
+			  <p>{!! $slider->description !!}</p>
+			  <a href="{{url('services')}}" class="btn_1">Discover Now</a>
 			</div>
 		  </div>
 		</div>
@@ -21,6 +23,27 @@
 	</div>
   </section>
   
+{{-- <section class="best_services section_padding">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-xl-6">
+				<div class="section_tittle text-center">
+					<h2>We Offered Best Services</h2>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			@foreach(App\Models\Category::all()->take(6) as $category)
+			<div class="col-lg-4 col-sm-6">
+				<div class="single_ihotel_list">
+					<img src="{{asset($category->image)}}" alt="">
+					<h3> <a href="{{route('category.show',str_replace(' ', '_',$category->name))}}"> {{$category->name}}</a></h3>
+				</div>
+			</div>
+			@endforeach
+		</div>
+	</div>
+</section> --}}
 {{-- <section class="best_services section_padding">
 	<div class="container">
 		<div class="row justify-content-center">
@@ -144,14 +167,14 @@
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <div class="about_img">
-                    <img src="{{asset('about-us.jpg')}}" alt="#">
+                    <img src="{{asset(App\Models\Information::buggyImage())}}" alt="#">
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="about_text">
-                    <h5>About Us</h5>
+                    <h5>About</h5>
                     <h2>Buggy Dubai tours</h2>
-                    <p>{!! App\Models\Information::aboutUs() !!}</p>
+                    <p>{!! App\Models\Information::buggyContent() !!}</p>
                 </div>
             </div>
         </div>

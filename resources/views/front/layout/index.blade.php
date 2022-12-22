@@ -62,16 +62,19 @@
 										<li class="nav-item">
 											<a class="nav-link {{Request::is('services')?'active':''}}" href="{{url('services')}}">Services</a>
 										</li>
-										@foreach(App\Models\Category::all()->take(2) as $category)
-										<li class="nav-item">
-											<a class="nav-link" href="{{route('category.show',str_replace(' ', '_',$category->name))}}">{{$category->name}}</a>
+										
+										<li class="nav-item dropdown">
+											<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown_1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											Category
+											</a>
+											<div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
+												@foreach(App\Models\Category::all()->take(2) as $category)
+												<a class="dropdown-item" href="{{route('category.show',str_replace(' ', '_',$category->name))}}">{{$category->name}}</a>
+												@endforeach
+											</div>
 										</li>
-										@endforeach
 										<li class="nav-item">
 											<a class="nav-link {{Request::is('about_us')?'active':''}}" href="{{url('about_us')}}">About Us</a>
-										</li>
-										<li class="nav-item">
-											<a class="nav-link {{Request::is('privacy_policy')?'active':''}}" href="{{url('privacy_policy')}}">Privacy Policy</a>
 										</li>
 										<li class="nav-item">
 											<a class="nav-link {{Request::is('contact_us')?'active':''}}" href="{{url('contact_us')}}">Contact Us</a>
@@ -107,6 +110,7 @@
 								<li><a href="{{url('services')}}">Services</a></li>
 								<li><a href="{{url('about_us')}}">About Us</a></li>
 								<li><a href="{{url('contact_us')}}">Contact Us</a></li>
+								<li><a href="{{url('privacy_policy')}}">Privacy Policy</a></li>
 							</ul>
 						</div>
 					</div>

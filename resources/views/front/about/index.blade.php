@@ -28,8 +28,8 @@
             </div>
             <div class="col-lg-6">
                 <div class="about_text">
-                    <h5>About Us</h5>
-                    <h2>Buggy Dubai tours</h2>
+                    <h5>Who we are</h5>
+                    <h2>About Us</h2>
                     <p>{!! App\Models\Information::aboutUs() !!}</p>
                 </div>
             </div>
