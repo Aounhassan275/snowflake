@@ -3,25 +3,25 @@
 <title>HOME | {{App\Models\Information::siteName()}}</title>
 @endsection
 @section('content')
-<section class="event_part section_padding">
-	<div class="container">
-		<div class="row">
-		<div class="col-lg-12">
-			<div class="event_slider owl-carousel">
-			@foreach(App\Models\Slider::orderBy('display_order')->get() as $slider)
-			<div class="single_event_slider" style="background-image:url({{asset($slider->image)}})!important;height:500px!important;">
-				{{-- <img src="" alt=""> --}}
-				{{-- <p>Adventure</p> --}}
-				{{-- <h1 style="text-align:center;">Adventure</h1> --}}
-			</div>
-			@endforeach
-			</div>
-		</div>
-		</div>
-	</div>
-</section>
 
-<section class="best_services section_padding">
+
+<section class="banner_part">
+	<div class="container">
+	  <div class="row align-items-center justify-content-center">
+		<div class="col-lg-10">
+		  <div class="banner_text text-center">
+			<div class="banner_text_iner">
+			  <h1> Saintmartine</h1>
+			  <p>Let’s start your journey with us, your dream will come true</p>
+			  <a href="#" class="btn_1">Discover Now</a>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </section>
+  
+{{-- <section class="best_services section_padding">
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-xl-6">
@@ -41,7 +41,7 @@
 			@endforeach
 		</div>
 	</div>
-</section>
+</section> --}}
 <section class="top_place section_padding">
 	<div class="container">
 		<div class="row justify-content-center">
@@ -62,9 +62,9 @@
 					<img src="{{asset(@$service->images->first()->image)}}" alt="">
 					<div class="hover_Text d-flex align-items-end justify-content-between">
 						<div class="hover_text_iner">
-							<a href="{{route('service.show',str_replace(' ', '_',$service->title))}}" class="place_btn">Book</a>
+							<a href="{{route('service.show',str_replace(' ', '_',$service->title))}}" class="place_btn">Book Now</a>
 							<a href="{{route('service.show',str_replace(' ', '_',$service->title))}}"><h3>{{$service->title}}</h3></a>
-							<a href="{{route('service.show',str_replace(' ', '_',$service->title))}}"><p>{{$service->price}} AED</p></a>
+							<a href="{{route('service.show',str_replace(' ', '_',$service->title))}}"><p>{{$service->price}} AED Per Person</p></a>
 							@if($service->dune_bashing)
 							<div class="place_review">
 								<a href="{{route('service.show',str_replace(' ', '_',$service->title))}}"><i class="fas fa-star"></i></a>
@@ -156,6 +156,103 @@
             </div>
         </div>
     </div>
+</section>
+<section class="top_place section_padding">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-xl-6">
+				<div class="section_tittle text-center">
+					<p>What's New</p>
+					<h2>Dubai Dune Buggy Experiences</h2>
+				</div>
+			</div>
+		</div>
+		@php 
+		$dune_buggy_category = App\Models\Category::where('name','Dune Buggy')->first();
+		@endphp
+		<div class="row">
+			@foreach(App\Models\Service::where('category_id',@$dune_buggy_category->id)->orderBy('display_order')->get()->take(8) as $service)
+			<div class="col-lg-6 col-md-6">
+				<div class="single_place">
+					<img src="{{asset(@$service->images->first()->image)}}" alt="">
+					<div class="hover_Text d-flex align-items-end justify-content-between">
+						<div class="hover_text_iner">
+							<a href="{{route('service.show',str_replace(' ', '_',$service->title))}}" class="place_btn">Book Now</a>
+							<a href="{{route('service.show',str_replace(' ', '_',$service->title))}}"><h3>{{$service->title}}</h3></a>
+							<a href="{{route('service.show',str_replace(' ', '_',$service->title))}}"><p>{{$service->price}} AED Per Person</p></a>
+							@if($service->dune_bashing)
+							<div class="place_review">
+								<a href="{{route('service.show',str_replace(' ', '_',$service->title))}}"><i class="fas fa-star"></i></a>
+								<a href="{{route('service.show',str_replace(' ', '_',$service->title))}}"><span> Dune Bashing in Land Cruiser</span></a>
+							</div>
+							<br>
+							@endif
+							@if($service->belly_dance)
+								<div class="place_review">
+									<a href="{{route('service.show',str_replace(' ', '_',$service->title))}}"><i class="fas fa-star"></i></a>
+									<a href="{{route('service.show',str_replace(' ', '_',$service->title))}}"><span> Belly Dance</span></a>
+								</div>
+							<br>
+							@endif
+							@if($service->fire_show)
+							<div class="place_review">
+								<a href="{{route('service.show',str_replace(' ', '_',$service->title))}}"><i class="fas fa-star"></i></a>
+								<a href="{{route('service.show',str_replace(' ', '_',$service->title))}}"><span> Fire Show</span></a>
+							</div>
+							<br>
+							@endif
+							@if($service->sand_boarding)
+							<div class="place_review">
+								<a href="{{route('service.show',str_replace(' ', '_',$service->title))}}"><i class="fas fa-star"></i></a>
+								<a href="{{route('service.show',str_replace(' ', '_',$service->title))}}"><span> Sand-Boarding</span></a>
+							</div>
+							<br>
+							@endif
+							@if($service->tanoura_show)
+							<div class="place_review">
+								<a href="{{route('service.show',str_replace(' ', '_',$service->title))}}"><i class="fas fa-star"></i></a>
+								<a href="{{route('service.show',str_replace(' ', '_',$service->title))}}"><span> Tanoura Show</span></a>
+							</div>
+							<br>
+							@endif
+							@if($service->refreshments)
+							<div class="place_review">
+								<a href="{{route('service.show',str_replace(' ', '_',$service->title))}}"><i class="fas fa-star"></i></a>
+								<a href="{{route('service.show',str_replace(' ', '_',$service->title))}}"><span> Refreshments</span></a>
+							</div>
+							<br>
+							@endif
+							@if($service->short_camel_ride)
+							<div class="place_review">
+								<a href="{{route('service.show',str_replace(' ', '_',$service->title))}}"><i class="fas fa-star"></i></a>
+								<a href="{{route('service.show',str_replace(' ', '_',$service->title))}}"><span> Short Camel Ride</span></a>
+							</div>
+							<br>
+							@endif
+							@if($service->photography)
+							<div class="place_review">
+								<a href="{{route('service.show',str_replace(' ', '_',$service->title))}}"><i class="fas fa-star"></i></a>
+								<a href="{{route('service.show',str_replace(' ', '_',$service->title))}}"><span> Opportunity of Photography</span></a>
+							</div>
+							<br>
+							@endif
+							@if($service->henaa_tattoo)
+							<div class="place_review">
+								<a href="{{route('service.show',str_replace(' ', '_',$service->title))}}"><i class="fas fa-star"></i></a>
+								<a href="{{route('service.show',str_replace(' ', '_',$service->title))}}"><span> Henna Tattoo for Ladies</span></a>
+							</div>
+							@endif
+						</div>
+						{{-- <div class="details_icon text-right">
+							<i class="ti-share"></i>
+						</div> --}}
+					</div>
+				</div>
+			</div>
+			@endforeach
+			{{-- <a href="{{url('services')}}" class="btn_1 text-cnter">Discover More</a> --}}
+		</div>
+	</div>
 </section>
 <section class="client_review section_padding">
 	<div class="container">

@@ -27,9 +27,9 @@
 					<img src="{{asset(@$service->images->first()->image)}}" alt="">
 					<div class="hover_Text d-flex align-items-end justify-content-between">
 						<div class="hover_text_iner">
-							<a href="{{route('service.show',str_replace(' ', '_',$service->title))}}" class="place_btn">Book</a>
+							<a href="{{route('service.show',str_replace(' ', '_',$service->title))}}" class="place_btn">Book Now</a>
 							<a href="{{route('service.show',str_replace(' ', '_',$service->title))}}"><h3>{{$service->title}}</h3></a>
-							<a href="{{route('service.show',str_replace(' ', '_',$service->title))}}"><p>{{$service->price}} AED</p></a>
+							<a href="{{route('service.show',str_replace(' ', '_',$service->title))}}"><p>{{$service->price}} AED Per Person</p></a>
 							@if($service->dune_bashing)
 							<div class="place_review">
 								<a href="{{route('service.show',str_replace(' ', '_',$service->title))}}"><i class="fas fa-star"></i></a>
