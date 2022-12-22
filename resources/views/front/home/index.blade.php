@@ -5,7 +5,7 @@
 @section('content')
 
 @php 
-$slider = App\Models\Slider::find(1);
+$slider = App\Models\Slider::first();
 @endphp
 <section class="banner_part" style="background-image:url({{asset($slider->image)}})">
 	<div class="container">

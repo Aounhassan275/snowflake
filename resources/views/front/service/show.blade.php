@@ -54,35 +54,51 @@
   <section class="tour_details_content section_padding">
       <div class="container">
           <div class="row justify-content-center">
-              <div class="col-lg-9">
+            <div class="col-lg-12">
+              <p>Booking Form</p>
+              <form class="form-contact contact_form" action="{{route('admin.message.store')}}" method="post">
+                @csrf
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label>Name</label>
+                      <input class="form-control" name="name" id="name" type="text" required>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label>Email</label>
+                      <input class="form-control" name="email" id="email" type="email" required>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label>Phone</label>
+                      <input class="form-control" name="phone" id="phone" type="text" required>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label>Date</label>
+                      <input class="form-control" name="date" type="date" required>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-group">
+                      <label>Enquiry</label>
+                      <textarea class="form-control w-100" name="message" id="message" cols="30" rows="3" required></textarea>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group mt-3" style="text-align:right!important;">
+                  <button type="submit" class="button button-contactForm btn_1">Booked</button>
+                </div>
+              </form>
+            </div>
+              <div class="col-lg-12">
                   <div class="content_iner description_text">
                       {!! $service->description !!}
                   </div>
-              </div>
-              <div class="col-lg-3">
-                <p>Booking Form</p>
-                <form class="form-contact contact_form" action="{{route('admin.message.store')}}" method="post">
-                  @csrf
-                  <div class="form-group">
-                    <label for="">Date</label>
-                    <input class="form-control" name="date" type="date" required>
-                  </div>
-                  <div class="form-group">
-                    <label for="">Name</label>
-                    <input class="form-control" name="name" type="text" required>
-                  </div>
-                  <div class="form-group">
-                    <label for="">Email</label>
-                    <input class="form-control" name="email" type="email" required>
-                  </div>
-                  <div class="form-group">
-                    <label for="">Enquiry</label>
-                    <textarea class="form-control w-100" name="message" id="message" cols="30" rows="9" required></textarea>
-                  </div>
-                  <div class="form-group mt-3">
-                    <button type="submit" class="button button-contactForm btn_1">Book</button>
-                  </div>
-                </form>
               </div>
           </div>
       </div>
