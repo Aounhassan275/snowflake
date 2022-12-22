@@ -23,13 +23,13 @@
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <div class="about_img">
-                    <img src="{{asset('front/img/about_img.png')}}" alt="#">
+                    <img src="{{asset('about-us.jpg')}}" alt="#">
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="about_text">
-                    <h5>Who we are</h5>
-                    <h2>About Us</h2>
+                    <h5>About Us</h5>
+                    <h2>Buggy Dubai tours</h2>
                     <p>{!! App\Models\Information::aboutUs() !!}</p>
                 </div>
             </div>

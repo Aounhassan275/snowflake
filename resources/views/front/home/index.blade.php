@@ -23,7 +23,8 @@
 		<div class="row justify-content-center">
 			<div class="col-xl-6">
 				<div class="section_tittle text-center">
-					<h2>Top Services / Trips</h2>
+					<p>What's New</p>
+					<h2>Dubai Desert Safari Experiences</h2>
 				</div>
 			</div>
 		</div>
@@ -111,6 +112,45 @@
 		</div>
 	</div>
 </section>
+<section class="about_us section_padding">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="about_img">
+                    <img src="{{asset('about-us.jpg')}}" alt="#">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="about_text">
+                    <h5>About Us</h5>
+                    <h2>Buggy Dubai tours</h2>
+                    <p>{!! App\Models\Information::aboutUs() !!}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="best_services section_padding">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-xl-6">
+				<div class="section_tittle text-center">
+					<h2>We Offered Best Services</h2>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			@foreach(App\Models\Category::all()->take(6) as $category)
+			<div class="col-lg-4 col-sm-6">
+				<div class="single_ihotel_list">
+					<img src="{{asset($category->image)}}" alt="">
+					<h3> <a href="{{route('category.show',str_replace(' ', '_',$category->name))}}"> {{$category->name}}</a></h3>
+				</div>
+			</div>
+			@endforeach
+		</div>
+	</div>
+</section>
 <section class="client_review section_padding">
 	<div class="container">
 		<div class="row ">
@@ -139,27 +179,6 @@
 					@endforeach
 				</div>
 			</div>
-		</div>
-	</div>
-</section>
-<section class="best_services section_padding">
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-xl-6">
-				<div class="section_tittle text-center">
-					<h2>We Offered Best Services</h2>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			@foreach(App\Models\Category::all()->take(6) as $category)
-			<div class="col-lg-4 col-sm-6">
-				<div class="single_ihotel_list">
-					<img src="{{asset($category->image)}}" alt="">
-					<h3> <a href="{{route('category.show',str_replace(' ', '_',$category->name))}}"> {{$category->name}}</a></h3>
-				</div>
-			</div>
-			@endforeach
 		</div>
 	</div>
 </section>

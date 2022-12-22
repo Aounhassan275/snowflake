@@ -39,7 +39,7 @@
 								<a href="{{App\Models\Information::facebook()}}"><img src="{{asset('facebook.png')}}" alt="logo" style="width:55px;"></a>
 								<a href="{{App\Models\Information::twitter()}}"><img src="{{asset('twitter.png')}}" alt="logo" style="width:40px;"></a>
 								<a href="{{App\Models\Information::instagram()}}"><img src="{{asset('instagram.png')}}" alt="logo" style="width:30px;"></a>
-								<a href="tel:{{App\Models\Information::phone()}}"><span><i class="flaticon-phone-call"></i>{{App\Models\Information::phone()}}</span></a> 
+								<a href="tel:{{App\Models\Information::phone()}}"><span><i class="flaticon-phone-call"></i><b>{{App\Models\Information::phone()}}</b></span></a> 
 							</div>
 						</div>
 					</div>
