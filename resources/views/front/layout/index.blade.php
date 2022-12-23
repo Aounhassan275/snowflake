@@ -36,9 +36,10 @@
 						
 						<div class="col-lg-6 col-sm-12 col-md-6">
 							<div class="sub_menu_social_icon">
-								<a href="{{App\Models\Information::facebook()}}"><img src="{{asset('facebook.png')}}" alt="logo" style="width:55px;"></a>
-								<a href="{{App\Models\Information::twitter()}}"><img src="{{asset('twitter.png')}}" alt="logo" style="width:40px;"></a>
-								<a href="{{App\Models\Information::instagram()}}"><img src="{{asset('instagram.png')}}" alt="logo" style="width:30px;"></a>
+								<a href="{{App\Models\Information::facebook()}}" target="_blank"><img src="{{asset('facebook.png')}}" alt="logo" style="width:55px;"></a>
+								<a href="{{App\Models\Information::twitter()}}" target="_blank"><img src="{{asset('twitter.png')}}" alt="logo" style="width:40px;"></a>
+								<a href="{{App\Models\Information::instagram()}}" target="_blank"><img src="{{asset('instagram.png')}}" alt="logo" style="width:30px;"></a>
+								<a href="https://wa.me/message/XBDRI4HIHSE3L1" target="_blank"><img src="{{asset('whatsapp.png')}}" alt="logo" style="width:30px;"></a>
 								<a href="tel:{{App\Models\Information::phone()}}"><span><i class="flaticon-phone-call"></i><b>{{App\Models\Information::phone()}}</b></span></a> 
 							</div>
 						</div>
@@ -121,9 +122,10 @@
 							<p><a href="tel:{{App\Models\Information::phone()}}" style="color:white;">{{App\Models\Information::phone()}}</a></p>
 							<span><a href="mailto:{{App\Models\Information::email()}}" style="color:white;">{{App\Models\Information::email()}}</a></span>
 							<div class="social-icons">
-								<a href="{{App\Models\Information::facebook()}}"><img src="{{asset('facebook.png')}}" alt="logo" style="width:55px;"></a>
-								<a href="{{App\Models\Information::twitter()}}"><img src="{{asset('twitter.png')}}" alt="logo" style="width:40px;"></a>
-								<a href="{{App\Models\Information::instagram()}}"><img src="{{asset('instagram.png')}}" alt="logo" style="width:30px;"></a>
+								<a href="{{App\Models\Information::facebook()}}" target="_blank"><img src="{{asset('facebook.png')}}" alt="logo" style="width:55px;"></a>
+								<a href="{{App\Models\Information::twitter()}}" target="_blank"><img src="{{asset('twitter.png')}}" alt="logo" style="width:40px;"></a>
+								<a href="{{App\Models\Information::instagram()}}" target="_blank"><img src="{{asset('instagram.png')}}" alt="logo" style="width:30px;"></a>
+								<a href="https://wa.me/message/XBDRI4HIHSE3L1" target="_blank"><img src="{{asset('whatsapp.png')}}" alt="logo" style="width:30px;"></a>
 							</div>
 						</div>
 					</div>

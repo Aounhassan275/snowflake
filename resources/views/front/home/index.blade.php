@@ -21,7 +21,7 @@ $slider = App\Models\Slider::first();
 		</div>
 	  </div>
 	</div>
-  </section>
+</section>
   
 {{-- <section class="best_services section_padding">
 	<div class="container">
