@@ -91,7 +91,7 @@
                   </div>
                 </div>
                 <div class="form-group mt-3" style="text-align:right!important;">
-                  <button type="submit" class="button button-contactForm btn_1">Booked</button>
+                  <button type="submit" class="button button-contactForm btn_1">Submit</button>
                 </div>
               </form>
             </div>
