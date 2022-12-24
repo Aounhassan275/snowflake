@@ -168,6 +168,18 @@
 							</a>
 						</li>
 						<li class="nav-item">
+							<a href="{{route('admin.bookings.new')}}" class="nav-link {{Request::is('admin/new_bookings')?'active':''}}">
+								<i class="icon-search4"></i>
+								<span>New Booking</span>
+							</a>
+						</li> 
+						<li class="nav-item">
+							<a href="{{route('admin.bookings.index')}}" class="nav-link {{Request::is('admin/bookings')?'active':''}}">
+								<i class="icon-search4"></i>
+								<span>Booking</span>
+							</a>
+						</li> 
+						<li class="nav-item">
 							<a href="{{route('admin.category.index')}}" class="nav-link {{Request::is('admin/category')?'active':''}}">
 								<i class="icon-search4"></i>
 								<span>Categories</span>

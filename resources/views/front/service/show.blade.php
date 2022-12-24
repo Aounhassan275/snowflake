@@ -56,7 +56,7 @@
           <div class="row justify-content-center">
             <div class="col-lg-12">
               <p>Booking Form</p>
-              <form class="form-contact contact_form" action="{{route('admin.message.store')}}" method="post">
+              <form class="form-contact contact_form" action="{{route('admin.booking.store')}}" method="post">
                 @csrf
                 <div class="row">
                   <div class="col-sm-6">

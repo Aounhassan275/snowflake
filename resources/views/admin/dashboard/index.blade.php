@@ -55,5 +55,36 @@
             </div>
         </a>
     </div>
+    <div class="col-sm-6 col-xl-6">
+        <a href="{{route('admin.bookings.index')}}">
+            <div class="card card-body bg-warning-400 has-bg-image">
+                <div class="media">
+                    <div class="mr-3 align-self-center">
+                        <i class="icon-stack-picture icon-3x opacity-75"></i>
+                    </div>
+                    <div class="media-body text-right">
+                    <h3 class="mb-0">{{App\Models\Booking::count()}}</h3>
+                        <span class="text-uppercase font-size-xs">Total Bookings</span>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <div class="col-sm-6 col-xl-6">
+        <a href="{{route('admin.bookings.new')}}">
+            <div class="card card-body bg-violet-400 has-bg-image">
+                <div class="media">
+                    <div class="media-body align-self-center ">
+                    <h3 class="mb-0">{{App\Models\Booking::where('status',0)->count()}}</h3>
+                        <span class="text-uppercase font-size-xs">Total New Bookings </span>
+                    </div>
+                    <div class="ml-3 text-right">
+                        <i class="icon-bubbles4 icon-3x opacity-75"></i>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
 </div>
 @endsection

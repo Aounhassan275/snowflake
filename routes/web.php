@@ -22,9 +22,15 @@ Route::group(['prefix' => 'admin', 'as'=>'admin.','namespace' => 'Admin',], func
     Route::post('login','AuthController@login');
      /******************MESSAGE ROUTES****************/
      Route::resource('message', 'MessageController');
+     /******************BOOKING ROUTES****************/
+     Route::resource('booking', 'BookingController');
     Route::group(['middleware' => 'auth:admin'], function () { 
     /*******************Logout ROUTES*************/       
     Route::get('logout','AuthController@logout')->name('logout');
+    /*******************Booking ROUTES*************/       
+    Route::view('bookings','admin.booking.index')->name('bookings.index');
+    Route::view('new_bookings','admin.booking.new_bookings')->name('bookings.new');
+    Route::get('booking/mark_as_old/{id}','BookingController@markAsOld')->name('booking.mark_as_old');
     /*******************Dashoard ROUTES*************/
     Route::view('dashboard', 'admin.dashboard.index')->name('dashboard.index');
     /******************ADMIN ROUTES****************/

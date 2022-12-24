@@ -7,6 +7,7 @@
 @php 
 $slider = App\Models\Slider::first();
 @endphp
+@if($slider)
 <section class="banner_part" style="background-image:url({{asset($slider->image)}})">
 	<div class="container">
 	  <div class="row align-items-center justify-content-center">
@@ -22,7 +23,7 @@ $slider = App\Models\Slider::first();
 	  </div>
 	</div>
 </section>
-  
+@endif
 {{-- <section class="best_services section_padding">
 	<div class="container">
 		<div class="row justify-content-center">
