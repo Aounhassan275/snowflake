@@ -19,15 +19,14 @@
 		<link href="{{asset('admin/assets/css/toastr.css')}}" rel="stylesheet" type="text/css">
 		@toastr_css
 		@yield('style')
-		<!-- Google tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-GW438XEN2F">
-		</script>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-FZV7HMGEFK"></script>
 		<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
 
-		gtag('config', 'G-GW438XEN2F');
+		gtag('config', 'G-FZV7HMGEFK');
 		</script>
 	</head>
 	<body>
